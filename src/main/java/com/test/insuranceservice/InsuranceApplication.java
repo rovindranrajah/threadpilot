@@ -1,13 +1,13 @@
-package com.test.threadpilot;
+package com.test.insuranceservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ThreadpilotApplication {
+public class InsuranceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ThreadpilotApplication.class, args);
+		SpringApplication.run(InsuranceApplication.class, args);
 
 	}
 

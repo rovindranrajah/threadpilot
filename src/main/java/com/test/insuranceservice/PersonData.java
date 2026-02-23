@@ -1,14 +1,16 @@
-package com.test.threadpilot;
+package com.test.insuranceservice;
 
-import com.test.threadpilot.datamodel.CarInsurance;
-import com.test.threadpilot.datamodel.Insurance;
-import com.test.threadpilot.datamodel.Person;
-import com.test.threadpilot.datamodel.Vehicle;
+import com.test.insuranceservice.datamodel.CarInsurance;
+import com.test.insuranceservice.datamodel.Insurance;
+import com.test.insuranceservice.datamodel.Person;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class PersonData {
     private LinkedList<Person> personData;
+    private final LinkedList <String> campaignDiscountCustomers = new LinkedList<>(Arrays.asList("555555", "111111"));
+    private final double businessCampaignDiscount = 20;
 
     public PersonData() {
         LinkedList<Insurance> insuranceData = new LinkedList<>();
@@ -51,5 +53,13 @@ public class PersonData {
 
     public void addPersonData(Person personData) {
         this.personData.add(personData);
+    }
+
+    public boolean isEligibleForCampaignDiscount(Person person) {
+        return campaignDiscountCustomers.contains(person.getIdNumber());
+    }
+
+    public double getBusinessCampaignDiscount() {
+        return businessCampaignDiscount;
     }
 }

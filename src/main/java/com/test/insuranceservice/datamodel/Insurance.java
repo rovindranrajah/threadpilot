@@ -1,4 +1,4 @@
-package com.test.threadpilot.datamodel;
+package com.test.insuranceservice.datamodel;
 
 public class Insurance {
     private String insuranceType;

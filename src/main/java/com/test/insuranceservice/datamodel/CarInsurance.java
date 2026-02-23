@@ -1,4 +1,4 @@
-package com.test.threadpilot.datamodel;
+package com.test.insuranceservice.datamodel;
 
 public class CarInsurance extends Insurance{
     private String regNo;
